@@ -1,16 +1,14 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- */
-
-package com.mycompany.poe1;
-
-/**
- *
- * @author User
- */
 public class Login {
-
-    public static void main(String[] args) {
-        System.out.println("Hello World!");
+    private String storedUsername;
+    private String storedPassword;
+    private String firstName;
+    private String lastName;
+    
+    public boolean checkUsername(String username) {
+        return username.contains("_") && username.length() <= 5; //Performing a method check//
+    }
+    
+    public boolean checkCellPhoneNumber(String phoneNumber) {
+        return phoneNumber.startsWith("+") && phoneNumber.substring(1).length() <= 10;
     }
 }
