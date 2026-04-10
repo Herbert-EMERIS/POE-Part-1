@@ -11,4 +11,17 @@ public class Login {
     public boolean checkCellPhoneNumber(String phoneNumber) {
         return phoneNumber.startsWith("+") && phoneNumber.substring(1).length() <= 10;
     }
+    
+    public boolean checkPasswordComplexity(String password) {
+        //the password needs a capital letter, a number and a special charecter//
+        String regex = "(?[A-Z])(0-9)([@_-.&])";
+        return password.matches(regex);
+    }
+    
+    public String registerUser(String username, String password, String cellPhoneNumber, String firstName, String lastName) {
+        if (!checkUserName(username)) {
+            return "Username is not correct formatted; please ensure that your username contains an underscore and is more than five characters long.";
+        }
+        if 
+    }
 }
